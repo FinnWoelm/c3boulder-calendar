@@ -4,21 +4,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!--<script src="script.js"></script>-->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-        <script>
-          $('#container').load('http://google.com'); // SERIOUSLY!
-
-          $.ajax({
-              url: 'http://news.bbc.co.uk',
-              type: 'GET',
-              success: function(res) {
-                  var headline = $(res.responseText).find('a.tsh').text();
-                  alert(headline);
-              }
-          });
-        </script>
+    <script type="text/javascript" src="script.js"></script>
   </head>
   
-    <body>
-        <div id = 'container'></div>
-    </body>
+  <body>
+  </body>
 </html>
