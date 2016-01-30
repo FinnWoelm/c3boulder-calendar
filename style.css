@@ -1,0 +1,12 @@
+img {
+  float: left;
+  max-width: 100px;
+}
+
+.event {
+  clear: both;
+}
+
+.name {
+  padding-top: 1em;
+}
