@@ -24,7 +24,7 @@ $(function() {
     // add data
     event.find(".image-holder div.event-image").css('background-image', 'url('+imageUrl+')');
     event.find(".name").html(name);
-    event.find(".description").html(description.replace(/<.{0,1}p>/, ""));
+    event.find(".description").html(description.replace(/<.{0,1}p>/g, "").replace(/<br.{0,2}>/g, " / "));
     event.find(".description").text(cut(200));
     event.find(".description").append(" ...");
     event.find(".start-date").html(formatDate(startDate));
@@ -53,7 +53,7 @@ $(function() {
     start = new Date(start);
     end = new Date(end);
     duration = end.getTime() - start.getTime();
-    console.log(duration);
+    //console.log(duration);
     formattedDuration = "";
 
     MINUTE = 1000*60;
@@ -79,9 +79,9 @@ $(function() {
     MONTHS = new Array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
     date = new Date(date);
 
-    console.log(new Date(getNextWeek(Date.now()-timezone())+timezone()).toUTCString());
-    console.log(date.toUTCString());
-    console.log(date);
+    //console.log(new Date(getNextWeek(Date.now()-timezone())+timezone()).toUTCString());
+    //console.log(date.toUTCString());
+    //console.log(date);
     //console.log()
 
     // if in the same week, just show name of day + time
