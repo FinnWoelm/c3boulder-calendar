@@ -5,17 +5,45 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <div id="container">
+
+    <div id="container" style="font-family: sans-serif;">
     </div>
+
+
     <!-- template for new events -->
     <div id="event-template" style="display:none;">
-      <div class="event">
-        <img class="image" />
-        <div class="name"></div>
-        <div class="date"></div>
-        <div class="location"></div>
-        <div class="description"></div>
+      <div class="event row sqs-row" style="clear:both; margin-bottom: 40px;">
+        <a class="event-link" target="_blank" href="">
+          <div class="image-holder col sqs-col-3 span-3" style="height: 150px; margin-bottom:20px;">
+            <div style="height: 150px; width: 100%; border-radius: 0px; border: 1px solid black;  text-align: center;">
+              <div class="event-image" style="height: 150px; margin: 0px; text-align: center; background-position: center center; background-repeat: no-repeat; background-size: cover;"></div>
+            </div>
+            <div class="date-overlay" style="position: relative; top: -151px; padding: 5px 10px; left: 0px; display:inline-block; text-align: center; font-weight:bold; color: white; background-color: rgba(0,0,0,.5); border-bottom-right-radius: 5px;">
+              <div class="day" style="line-height: 100%; font-size: 120%;"></div>
+              <div class="month" style="text-transform: uppercase; font-family: inherit; font-size: 80%; line-height: 100%;"></div>
+            </div>
+          </div>
+        </a>
+        <div class="info-holder col sqs-col-9 span-9">
+          <div style="padding-left: 20px; line-height: 100%;">
+            <div style="margin-bottom: 10px;"><a href="" class="name event-link" target="_blank" style="font-weight: bold; line-height: 100%; text-decoration: underline;"></a></div>
+          </div>
+          <div style="padding-left: 20px;">
+            <div><i class="fa fa-fw fa-calendar"></i> Begins <span class="start-date"></span></div>
+            <div><i class="fa fa-fw fa-clock-o"></i> <span class="duration"></span></div>
+            <!--<div>Ends on <span class="end-date"></span></div>-->
+            <div><i class="fa fa-fw fa-map-marker"></i> <span class="location"></span></div>
+            <div><!--<i class="fa fa-fw fa-sticky-note-o"></i> Description: <br/>-->
+            <span class="description" style="font-size: 90%; color: gray;"></span>
+            </div>
+          </div>
+          </div>
+        </div>
+
+        <hr />
       </div>
-    </div>
+    </div>     
+    
+    
   </body>
 </html>
